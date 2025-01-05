@@ -60,11 +60,6 @@ const todoSlice = createSlice({
         createError: null,
         createLoading: false
     },
-    reducers: {
-        getTodos: (state, action) => {
-            state.data = action.payload
-        }
-    },
     extraReducers: (builder) => {
         builder
             .addCase(createTodoAsync.pending, (state)=>{
@@ -93,5 +88,4 @@ const todoSlice = createSlice({
     }
 })
 
-export const { getTodos } = todoSlice.actions;
 export default todoSlice.reducer;
